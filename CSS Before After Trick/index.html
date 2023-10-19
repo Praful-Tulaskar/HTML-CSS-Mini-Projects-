@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Before and After</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar ul{
+            display: flex;
+        }
+        .nav-items{
+            list-style: none;
+            padding: 10px 20px;
+        }
+        body{
+            background-color: black;
+            color: white;
+            /* opacity: 0.3; */
+        }
+        header::before{
+            background: url('https://imgs.search.brave.com/vSdr5w_xg7WeedWtNN6KaMGCWafH7N8PKhm-Ra0JPp4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2Q1L2Vk/L2VmL2Q1ZWRlZjU2/NjAzZDc5ZGZiNTVl/ZWFkYzcxOTQ5OThi/LmpwZw') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 100px;
+            height: 200px;
+        }
+        /* section::after{
+            content: "This is After content";
+            padding: 50px 10px;
+        }
+        section::before{
+            content: "This is Before content";
+            padding: 10px;
+        } */
+        h2{
+            font-size: 4rem;
+            padding: 20px;
+        }
+        p{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li class="nav-items">Home</li>
+                <li class="nav-items">About</li>
+                <li class="nav-items">Services</li>
+                <li class="nav-items">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Welcome to the Coding World</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic enim quae eum voluptates excepturi vero ipsam? Amet eius eligendi, sapiente eos exercitationem voluptatem porro repellendus architecto perferendis est, eaque quia corporis perspiciatis incidunt dignissimos.</p>
+    </section>
+    <hr>
+</body>
+</html>
